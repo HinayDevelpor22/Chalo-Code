@@ -1,2 +1,2 @@
-# Chalo-Code
-Node.js and Express web app for an educational site, featuring static frontend files, server-side routing, and MongoDB integration using Mongoose, with a well-organized folder structure for routes, models, and environment settings.
+# Chalo-Code <br>
+This project is a Node.js and Express-based web application designed for a course or educational platform named "Chalo-Code." It includes a server.js file to run the Express server, a package.json for managing dependencies, and a .env.example for environment configuration. Static frontend assets like HTML, CSS, and JavaScript are placed in the public/ folder, while server-side route handlers are organized in the routes/ directory and data models in the models/ directory. The application also supports MongoDB integration using Mongoose for handling user and form data.

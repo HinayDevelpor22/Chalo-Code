@@ -1,0 +1,253 @@
+/* body ka styling – font, margin, background, aur text color set karny k liye */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; 
+  color: #333; 
+}
+/* Navbar styling */
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 2em;
+    position: relative;
+    z-index: 1000;
+    top: 1vw;
+   
+    /* background-color: #00839b; */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+   margin-right: 15vw;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 2vw;
+    margin-top: 1vh;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: #fff;
+    transition: color 0.3s;
+    font-weight: 500;
+    position: relative;
+    margin-left: 40px;
+}
+
+#meet {
+    color: #00839b;
+}
+
+#btnLogin {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 70px;
+    background: transparent;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+#btnLogin:hover {
+    background: #fff;
+    color: #00839b;
+}
+
+.anim::after {
+    content: " ";
+    border-radius: 5px;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.anim:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-links li a:hover {
+    color: #00839b;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.background {
+    border-radius: 16px;
+    border: 1px solid #1a1a1a;
+    background: rgba(74, 74, 74, 0.39);
+    mix-blend-mode: luminosity;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(15px);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__icon {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__icon span {
+    width: 100%;
+    height: 0.125rem;
+    border-radius: 0.125rem;
+    background-color: #00839b;
+    box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
+    transition: transform .4s, background-color .4s, opacity .4s;
+}
+
+.menu__icon:hover span:nth-child(1) {
+    background-color: #fff;
+    transform: translateY(11px) rotate(-45deg);
+}
+
+.menu__icon:hover span:nth-child(2) {
+    transform: translate(-50%);
+    opacity: 0;
+}
+
+.menu__icon:hover span:nth-child(3) {
+    background-color: #fff;
+    transform: translateY(-11px) rotate(45deg);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* header ka background, padding, text center aur color white krny k liye */
+header {
+  background-color: #282c34;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+/* section part ka andar ka area set karne ke liye – padding or center align */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto; /* center mein lane ke liye */
+}
+
+/* section ke andar h2 ke liye font set krny k liye */
+.purpose h2 {
+  font-family: ubantu; 
+}
+
+/* animation banane ke liye – text neeche se halka sa upar aaye */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* neeche se aaye */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* apni jagah pe ruk jaye */
+  }
+}
+
+/* jisme animate class lagi ho, usmein fadeSlideIn animation apply hoga */
+.animate {
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+/* purpose class ke andar paragraph text ka font change krny k liye */
+.purpose p {
+  font-family: ui-monospace;
+}
+
+/* team heading ke liye font set kiya hai */
+.team {
+  font-family: ubantu; 
+}
+
+/* team ke andar image ki styling – size aur round corner */
+.team img {
+  width: 100px;
+  border-radius: 50px; /* gol banane ke liye */
+}
+
+/* slider container – position aur height control karta hai */
+.slider {
+  position: relative;
+  overflow: hidden;
+  min-height: 150px; /* height fix ki gayi hai */
+}
+
+/* har slide initially hidden rahegi */
+.slide {
+  display: none;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+/* image position karne ke liye – slide ke corner mein dikhane ke liye */
+.slider .slide .images {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+
+/* jo slide active ho, sirf wahi show hogi */
+.slide.active {
+  display: block;
+}
+
+/* slider ke control buttons center mein lane ke liye */
+.controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* button ka styling – color, shape, padding */
+button {
+  padding: 0.5rem 1rem;
+  margin: 0 10px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* cursor ko pointer banana (hand jaisa) */
+}
+
+/* button hover par dark color ho jaye */
+button:hover {
+  background-color: #1d1414;
+}

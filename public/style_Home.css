@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: poppins, sans serif;
+    /* color: ; */
+}
+
+/* Background */
+body {
+    background-image: url('Background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 2em;
+    position: relative;
+    z-index: 1000;
+    top: 1vw;
+    right: 10vw;
+    /* background-color: #00839b; */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 12vw;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 2vw;
+    margin-top: 1vh;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: #fff;
+    transition: color 0.3s;
+    font-weight: 500;
+    position: relative;
+    margin-left: 40px;
+}
+
+#meet {
+    color: #00839b;
+}
+
+#btnLogin {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 70px;
+    background: transparent;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+#btnLogin:hover {
+    background: #fff;
+    color: #00839b;
+}
+
+.anim::after {
+    content: " ";
+    border-radius: 5px;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.anim:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-links li a:hover {
+    color: #00839b;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.background {
+    border-radius: 16px;
+    border: 1px solid #1a1a1a;
+    background: rgba(74, 74, 74, 0.39);
+    mix-blend-mode: luminosity;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(15px);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__icon {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__icon span {
+    width: 100%;
+    height: 0.125rem;
+    border-radius: 0.125rem;
+    background-color: #00839b;
+    box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
+    transition: transform .4s, background-color .4s, opacity .4s;
+}
+
+.menu__icon:hover span:nth-child(1) {
+    background-color: #fff;
+    transform: translateY(11px) rotate(-45deg);
+}
+
+.menu__icon:hover span:nth-child(2) {
+    transform: translate(-50%);
+    opacity: 0;
+}
+
+.menu__icon:hover span:nth-child(3) {
+    background-color: #fff;
+    transform: translateY(-11px) rotate(45deg);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.animated-text {
+    font-size: 1.9em;
+    font-weight: bold;
+    animation: colorChange 2s infinite alternate;
+    padding: 1em;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #fff;
+    }
+
+    100% {
+        color: #00839b;
+    }
+}
+
+.quote {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #fff;
+}
+
+.team-typing {
+    margin-top: 2rem;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s steps(1) infinite;
+    color: #00839b;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #232728a9;
+        position: absolute;
+        top: 85px;
+        right: 0;
+        width: 100%;
+        padding: 1em;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links li {
+        width: auto;
+    }
+
+    .nav-links li a {
+        margin-left: 0;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    #btnLogin {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
